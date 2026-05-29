@@ -24,6 +24,7 @@ public class Song {
 
     public String getTitle() { return title; }
     public int getDuration() { return duration; }
+    public void setDuration(int duration) { this.duration = duration; }
     public String getGenre() { return genre; }
     public int getYear() { return year; }
     public String getFilePath() { return filePath; }

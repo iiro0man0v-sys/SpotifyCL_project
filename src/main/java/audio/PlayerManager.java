@@ -3,13 +3,13 @@ package audio;
 
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
+import javafx.util.Duration;
 import model.Album;
 import model.Song;
-
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Random;
-
+import static javafx.util.Duration.ZERO;
 
 public class PlayerManager {
     private ArrayList<Song> currentQueue = new ArrayList<>();
@@ -47,18 +47,19 @@ public class PlayerManager {
         if (mediaPlayer != null) {
             mediaPlayer.stop();
             mediaPlayer.dispose();
+            mediaPlayer = null;
         }
 
         try {
+
             Media media = new Media(uri);
             mediaPlayer = new MediaPlayer(media);
             mediaPlayer.setVolume(volume);
 
             mediaPlayer.setOnEndOfMedia(() -> {
-                repeating();
-            });
+                repeating();});
+                mediaPlayer.play();
 
-            mediaPlayer.play();
         } catch (Exception e) {
             System.out.println("Chyba při přehrávání: " + e.getMessage());
             e.printStackTrace();
@@ -117,10 +118,10 @@ public class PlayerManager {
             return;
         }
 
-        if (mediaPlayer != null && mediaPlayer.getCurrentTime().toSeconds() > 3) {
-            mediaPlayer.seek(javafx.util.Duration.ZERO);
+       if (mediaPlayer != null && mediaPlayer.getCurrentTime().toSeconds() > 3) {
+            mediaPlayer.seek(ZERO);
             return;
-        }
+       }
 
         currentIndex--;
         if (currentIndex < 0) {
@@ -263,16 +264,16 @@ public class PlayerManager {
 
 
     public double getDuration() {
-        if (mediaPlayer != null && mediaPlayer.getMedia() != null) {
+       if (mediaPlayer != null && mediaPlayer.getMedia() != null) {
             return mediaPlayer.getMedia().getDuration().toSeconds();
-        }
+       }
         return 0;
     }
 
 
     public void seek(double seconds) {
         if (mediaPlayer != null) {
-            mediaPlayer.seek(new javafx.util.Duration(seconds * 1000));
+            mediaPlayer.seek(new Duration(seconds));
         }
     }
 }
