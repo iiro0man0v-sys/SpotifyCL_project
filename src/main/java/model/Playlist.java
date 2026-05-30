@@ -12,6 +12,7 @@ public class Playlist {
     }
 
     public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
     public ArrayList<Song> getSongs() { return songs; }
 
     public void addSong(Song song) { songs.add(song); }

@@ -14,7 +14,7 @@ public class DataManager {
     private ArrayList<Song> recentlyPlayed;
     private ArrayList<Object> recentlyAdded;
 
-    private DataManager() {
+    public DataManager() {
         allSongs = new ArrayList<>();
         allAlbums = new ArrayList<>();
         allArtists = new ArrayList<>();

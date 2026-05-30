@@ -7,11 +7,13 @@ import javafx.util.Duration;
 import model.Album;
 import model.Song;
 import java.io.File;
+import data.DataManager;
 import java.util.ArrayList;
 import java.util.Random;
 import static javafx.util.Duration.ZERO;
 
 public class PlayerManager {
+    private DataManager dataManager;
     private ArrayList<Song> currentQueue = new ArrayList<>();
     private ArrayList<Song> originalQueue = new ArrayList<>();
     private int currentIndex = -1;
@@ -20,6 +22,10 @@ public class PlayerManager {
     private int repeatMode = 0; // 0 = bez opakování, 1 = opakovat skladbu, 2 = opakovat album
     private double volume = 0.5;
     private Random random = new Random();
+
+    public void setDataManager(DataManager dataManager) {
+        this.dataManager = dataManager;
+    }
 
 
     public Song getCurrentSong() {
@@ -33,6 +39,10 @@ public class PlayerManager {
     public void playSong(Song song) {
         if (song == null || song.getFilePath() == null) {
             return;
+        }
+
+        if (dataManager != null) {
+            dataManager.addToRecentlyPlayed(song);
         }
 
         File file = new File(song.getFilePath());
@@ -58,7 +68,7 @@ public class PlayerManager {
 
             mediaPlayer.setOnEndOfMedia(() -> {
                 repeating();});
-                mediaPlayer.play();
+            mediaPlayer.play();
 
         } catch (Exception e) {
             System.out.println("Chyba při přehrávání: " + e.getMessage());
@@ -118,10 +128,10 @@ public class PlayerManager {
             return;
         }
 
-       if (mediaPlayer != null && mediaPlayer.getCurrentTime().toSeconds() > 3) {
+        if (mediaPlayer != null && mediaPlayer.getCurrentTime().toSeconds() > 3) {
             mediaPlayer.seek(ZERO);
             return;
-       }
+        }
 
         currentIndex--;
         if (currentIndex < 0) {
@@ -264,16 +274,21 @@ public class PlayerManager {
 
 
     public double getDuration() {
-       if (mediaPlayer != null && mediaPlayer.getMedia() != null) {
+        if (mediaPlayer != null && mediaPlayer.getMedia() != null) {
             return mediaPlayer.getMedia().getDuration().toSeconds();
-       }
+        }
         return 0;
     }
 
 
     public void seek(double seconds) {
         if (mediaPlayer != null) {
-            mediaPlayer.seek(new Duration(seconds));
+            mediaPlayer.seek(new Duration(seconds * 1000));
         }
+    }
+
+    public boolean isPlaying() {
+        return mediaPlayer != null &&
+                mediaPlayer.getStatus() == MediaPlayer.Status.PLAYING;
     }
 }

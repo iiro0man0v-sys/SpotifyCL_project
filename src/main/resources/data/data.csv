@@ -1,6 +1,6 @@
-ARTIST;Linkin Park;Americká rocková kapela z Kalifornie.;src/main/resources/data/meteora.jpg
-ALBUM;Meteora;2003;src/main/resources/data/meteora.jpg;Linkin Park
-SONG;Faint;Nu metal;2003;C:\\Users\\roman\\Downloads\\Faint.mp3;Linkin Park;Meteora
-ARTIST;Eminem;Americký rapper a producent.;src/main/resources/data/eminem.jpg
-ALBUM;The Eminem Show;2002;src/main/resources/data/eminem_show.jpg;Eminem
-SONG;Without Me;Hip hop;2002;C:\\Users\\roman\\Downloads\\Edd_Sheeran_-_Shape_Of_You_(mp3.pm).mp3;Eminem;The Eminem Show
+ARTIST;Edd Sheran;Ginger ktery zpiva.;C:\\Users\\roman\\OneDrive\\Изображения\\asus.jpg
+ALBUM;Real Madrid 2016;2016;C:\\Users\\roman\\OneDrive\\Изображения\\asus.jpg;Edd Sheran
+SONG;Shape of you;Pop;2016;C:\\Users\\roman\\Downloads\\Edd_Sheeran_-_Shape_Of_You_(mp3.pm).mp3;Edd Sheran;Real Madrid 2016
+ARTIST;Eminem;Americký rapper a producent.;C:\\Users\\roman\\OneDrive\\Изображения\\ass.jpg
+ALBUM;The Eminem Show;2002;C:\\Users\\roman\\OneDrive\\Изображения\\aus.jpg;Eminem
+SONG;Without Me;Hip hop;2002;C:\\Users\\roman\\Downloads\\Eminem_-_Without_me_Muted_Vers_(mp3.pm).mp3;Eminem;The Eminem Show
