@@ -24,13 +24,10 @@ public class Song {
 
     public String getTitle() { return title; }
     public int getDuration() { return duration; }
-    public void setDuration(int duration) { this.duration = duration; }
     public String getGenre() { return genre; }
-    public int getYear() { return year; }
     public String getFilePath() { return filePath; }
     public String getCoverPath() { return coverPath; }
     public Artist getArtist() {return artist;}
-    public void setArtist(Artist artist) {this.artist = artist;}
     public Album getAlbum() {return album;}
     public void setAlbum(Album album) {this.album = album;}
 

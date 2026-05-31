@@ -1,8 +1,6 @@
 package data;
 
 import model.*;
-
-
 import java.util.ArrayList;
 
 
@@ -50,10 +48,6 @@ public class DataManager {
         return allArtists;
     }
 
-    public void addPlaylist(Playlist playlist) {
-        allPlaylists.add(playlist);
-    }
-
     public ArrayList<Playlist> getAllPlaylists() {
         return allPlaylists;
     }
@@ -71,16 +65,18 @@ public class DataManager {
         }
     }
 
+
     public ArrayList<Song> getRecentlyPlayed() {
         return recentlyPlayed;
     }
-
 
     public ArrayList<Object> getRecentlyAdded() {
         return recentlyAdded;
     }
 
-
+    /**
+     * Searches the song library by title or genre
+     */
     public ArrayList<Song> searchSongs(String query) {
         ArrayList<Song> results = new ArrayList<>();
         String lowerQuery = query.toLowerCase();
@@ -93,6 +89,9 @@ public class DataManager {
         return results;
     }
 
+    /**
+     * Searches the album library by title
+     */
     public ArrayList<Album> searchAlbums(String query) {
         ArrayList<Album> results = new ArrayList<>();
         String lowerQuery = query.toLowerCase();
@@ -104,6 +103,9 @@ public class DataManager {
         return results;
     }
 
+    /**
+     * Searches the artist library by name
+     */
     public ArrayList<Artist> searchArtists(String query) {
         ArrayList<Artist> results = new ArrayList<>();
         String lowerQuery = query.toLowerCase();

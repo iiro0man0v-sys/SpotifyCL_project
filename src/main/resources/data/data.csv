@@ -1,6 +1,9 @@
-ARTIST;Edd Sheran;Ginger ktery zpiva.;C:\\Users\\roman\\OneDrive\\Изображения\\asus.jpg
-ALBUM;Real Madrid 2016;2016;C:\\Users\\roman\\OneDrive\\Изображения\\asus.jpg;Edd Sheran
-SONG;Shape of you;Pop;2016;C:\\Users\\roman\\Downloads\\Edd_Sheeran_-_Shape_Of_You_(mp3.pm).mp3;Edd Sheran;Real Madrid 2016
-ARTIST;Eminem;Americký rapper a producent.;C:\\Users\\roman\\OneDrive\\Изображения\\ass.jpg
-ALBUM;The Eminem Show;2002;C:\\Users\\roman\\OneDrive\\Изображения\\aus.jpg;Eminem
-SONG;Without Me;Hip hop;2002;C:\\Users\\roman\\Downloads\\Eminem_-_Without_me_Muted_Vers_(mp3.pm).mp3;Eminem;The Eminem Show
+ARTIST;Ed Sheran;Ed Sheeran, vlastním jménem Edward Christopher Sheeran (* 17. února 1991 Halifax) je anglický zpěvák a textař s irskými kořeny.;src/main/resources/photos/Ed_Sheeran.jpg
+ALBUM;Real Madrid 2016;2016;src/main/resources/covers/Shape_of_you.jpg;Ed Sheran
+SONG;Shape of you;Pop;2016;src/main/resources/music/Edd_Sheeran_-_Shape_Of_You_(mp3.pm).mp3;Ed Sheran;Real Madrid 2016
+ARTIST;Eminem;Marshall Bruce Mathers III (* 17. října 1972), spíše známý jako Eminem, je americký rapper, hudební producent, herec a zakladatel nahrávací společnosti Shady Records;src/main/resources/photos/Eminem.jpg
+ALBUM;The Eminem Show;2002;src/main/resources/covers/Eminem_show.jpg;Eminem
+SONG;Without Me;Hip hop;2002;src/main/resources/music/Eminem_-_Without_me_Muted_Vers_(mp3.pm).mp3;Eminem;The Eminem Show
+ARTIST;Lady Gaga;Lady Gaga (* 28. března 1986) New Yorje americká popová zpěvačka, skladatelka, klavíristka, textařka, herečka a hudební producentka italského původu.;src/main/resources/photos/Lady_Gaga.jpg;;;
+ALBUM;The Fame;2008;src/main/resources/covers/Just_Dance.jpg;Lady Gaga;;
+SONG;Just Dance;Pop;2008;src/main/resources/music/tip-top_just-dance-lady-gaga-ft-akon.mp3;Lady Gaga;The Fame
